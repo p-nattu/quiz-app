@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>10問クイズ結果</title>
+</head>
+<body>
+
+<h1>結果発表</h1>
+
+<!-- メッセージ表示（問題不足など） -->
+<p th:if="${msg}" th:text="${msg}"></p>
+
+<!-- 正解数表示 -->
+<p th:if="${score != null}" th:text="|${totalCount}問中 ${score}問正解でした！|"></p>
+
+<br>
+
+<!-- リプレイ -->
+<a th:href="@{/quiz/play10}">リプレイ</a>
+
+<br><br>
+
+<!-- 一覧へ戻る -->
+<a th:href="@{/quiz}">一覧へ戻る</a>
+
+</body>
+</html>

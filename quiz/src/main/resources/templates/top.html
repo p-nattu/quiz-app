@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>トップ画面</title>
+</head>
+<body>
+
+    <h1>クイズアプリ トップ画面</h1>
+
+    <!-- 2択問題管理画面へ -->
+    <div>
+        <a th:href="@{/quiz}">2択問題管理へ</a>
+    </div>
+
+    <br>
+
+    <!-- 2択10問クイズへ -->
+    <div>
+        <a th:href="@{/quiz/play10}">2択10問クイズへ</a>
+    </div>
+
+    <br>
+	
+	<!-- 2択CSVアップロード画面へ -->
+	<div>
+		   <a th:href="@{/csv/quiz}">2択問題CSVアップロードへ</a>
+	</div>
+	
+	<br>
+	
+    <!-- 4択問題一覧へ -->
+    <div>
+        <a th:href="@{/four/list}">4択問題一覧へ</a>
+    </div>
+
+    <br>
+
+    <!-- 4択クイズプレイへ -->
+    <div>
+        <a th:href="@{/four/play}">4択クイズで遊ぶ</a>
+    </div>
+
+    <br>
+
+    <!-- 4択CSVアップロード画面へ -->
+    <div>
+        <a th:href="@{/csv}">4択CSVアップロードへ</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>2択問題CSVアップロード</title>
+</head>
+<body>
+
+    <h1>2択問題CSVアップロード</h1>
+
+    <form th:action="@{/csv/quiz/upload}" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" name="file" required>
+        </div>
+
+        <br>
+
+        <button type="submit">アップロード</button>
+    </form>
+
+    <br>
+
+    <a th:href="@{/}">トップへ戻る</a>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>4択プレイ</title>
+</head>
+<body>
+
+<h1>4択クイズ</h1>
+
+<form th:action="@{/four/check}" method="post">
+
+    <!-- 問題IDを送る -->
+    <input type="hidden" name="id" th:value="${question.id}">
+
+    <p th:text="${question.question}"></p>
+
+    <div>
+        <label>
+            <input type="radio" name="answer" value="1" required>
+            <span th:text="${question.choice1}"></span>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input type="radio" name="answer" value="2">
+            <span th:text="${question.choice2}"></span>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input type="radio" name="answer" value="3">
+            <span th:text="${question.choice3}"></span>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input type="radio" name="answer" value="4">
+            <span th:text="${question.choice4}"></span>
+        </label>
+    </div>
+
+    <br>
+    <button type="submit">回答する</button>
+</form>
+
+<br>
+<a th:href="@{/four/list}">一覧へ戻る</a>
+
+</body>
+</html>

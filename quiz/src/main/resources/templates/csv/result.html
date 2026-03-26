@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CSVアップロード結果</title>
+</head>
+<body>
+
+    <h1>CSVアップロード結果</h1>
+
+    <p th:text="${msg}"></p>
+
+    <br>
+
+    <a th:href="@{/csv}">CSV画面へ戻る</a>
+    <br>
+    <a th:href="@{/four/list}">4択問題一覧へ</a>
+    <br>
+    <a th:href="@{/}">トップへ戻る</a>
+
+</body>
+</html>
